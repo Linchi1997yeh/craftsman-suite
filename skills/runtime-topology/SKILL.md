@@ -37,8 +37,37 @@ You are a Systems and Infrastructure Architect. Your responsibility is to design
    - Backpressure when producers outpace consumers.
    - Record each case with its chosen mitigation.
 4. Artifact Persistence:
-   - Write the full topology specification to `.specs/03-runtime-topology.md` using the structure in `templates/03-runtime-topology.md` (bundled with this skill), plus a section for the edge cases from step 3. Create `.specs/` if needed.
+   - Write the full topology specification to `.specs/03-runtime-topology.md` using the template under **Artifact Template** below, plus a section for the edge cases from step 3. Create `.specs/` if needed.
    - Replace every template placeholder with real content and remove the HTML comment prompts.
+
+## Artifact Template
+Use this structure for `.specs/03-runtime-topology.md` (the template is inline so it is always available, with no file reads):
+```markdown
+# Runtime Topology Blueprint: [Feature/System Name]
+
+## 1. Compute & Process Boundaries
+- Compute Form: (Monolith / Worker / Microservice)
+- State Distribution: (Stateless compute, stateful persistence)
+
+## 2. Execution Synchronicity
+### Synchronous Boundaries (< 200ms)
+- Handler 1:
+- Handler 2:
+
+### Asynchronous Boundaries (Background / Queued)
+- Worker Task 1:
+- Worker Task 2:
+
+## 3. Data & Storage Fabric
+- Primary Transactional DB: (Relational / Document / Embedded)
+- Specialized Storage: (Vector / Blob / Append-only)
+- Caching Strategy: (In-memory / Redis / TTL & Invalidation keys)
+
+## 4. Messaging & Queue Mechanics
+- Broker / Transport:
+- Idempotency Guarantee:
+- Retry Policy & Dead-Letter Handling:
+```
 
 ## Hard Guardrails
 - Maintain language-agnostic mechanics (for example specify "Transactional Relational Database with Read Replicas", not a named database product or cloud service).

@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Current state
 
-The repo (`craftsman-suite`, MIT, author Darren Yeh) is scaffolded as a single Claude Code plugin and marketplace. The scaffold is `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `README.md`, `LICENSE` and the `.specs/` templates. All 10 `skills/<name>/SKILL.md` files are written (README status `ready`). Skills that write a `.specs/` artifact bundle their template under `skills/<name>/templates/`; `adversarial-review` writes reports to `.specs/reviews/`, which `behavior-tests`, `safe-refactor` and `dev-docs` read. There is no build or test tooling; validate manifests with `claude plugin validate .`.
+The repo (`craftsman-suite`, MIT, author Darren Yeh) is scaffolded as a single Claude Code plugin and marketplace. The scaffold is `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `README.md`, `LICENSE` and the `.specs/` templates. All 10 `skills/<name>/SKILL.md` files are written (README status `ready`). `adversarial-review` writes reports to `.specs/reviews/`, which `behavior-tests`, `safe-refactor` and `dev-docs` read. There is no build or test tooling; validate manifests with `claude plugin validate .`.
 
-The `skills/*/SKILL.md` files are the source of truth. The `.specs/` directory holds the artifact templates; each skill that writes an artifact also bundles its own copy under `skills/<name>/templates/`, so keep the two in sync when editing a template. An original design blueprint may exist locally as an untracked `plan.md`; it is not part of the repo and may be out of date.
+The `skills/*/SKILL.md` files are the source of truth. Each skill that writes a `.specs/` artifact inlines its template under an "Artifact Template" heading in its `SKILL.md` (plugin files outside the project trigger permission prompts, so templates are not bundled as separate files). The root `.specs/` copies are a human-readable reference; keep them in sync with the inline versions. An original design blueprint may exist locally as an untracked `plan.md`; it is not part of the repo and may be out of date.
 
 ## What is being built
 

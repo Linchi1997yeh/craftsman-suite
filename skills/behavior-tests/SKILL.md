@@ -46,5 +46,7 @@ You are a Test Automation Engineer. Your responsibility is to construct black-bo
 - Do NOT proceed to `/dev-docs` or any later stage. Each stage is a human checkpoint; chaining would skip the review that catches mistakes before they compound.
 
 ## Transition Stop Gate
-Stop and prompt the user:
-"Tests generated. Run the test command and verify all assertions pass before updating the backlog."
+Stop and prompt the user, choosing the line that matches what happened. Always list findings you skipped because they need a decision first, naming the stage that should record it:
+- Tests were run and all pass: "Tests generated and passing. Review them before updating the backlog."
+- Tests were run and some fail on purpose (unfixed findings): "Tests generated; N fail as expected because findings F-xx are unfixed. Fix those, then re-run the test command."
+- Tests were not run: "Tests generated but not run. Run the test command and verify the results before updating the backlog."
