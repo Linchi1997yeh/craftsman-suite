@@ -1,0 +1,402 @@
+[
+  {
+    "skill": "problem-spec",
+    "query": "ok so i want to build a tool that lets our support team tag tickets automatically, not sure where to start. can you help me figure out what we're actually building before we pick any tech",
+    "should_trigger": true
+  },
+  {
+    "skill": "problem-spec",
+    "query": "we're adding CSV export to the billing dashboard next sprint - write up the requirements and what's out of scope",
+    "should_trigger": true
+  },
+  {
+    "skill": "problem-spec",
+    "query": "help me scope this: a mobile app for our gym members to book classes. i keep adding features in my head",
+    "should_trigger": true
+  },
+  {
+    "skill": "problem-spec",
+    "query": "before we design anything for the new notifications service, can you pin down the constraints and non-goals",
+    "should_trigger": true
+  },
+  {
+    "skill": "problem-spec",
+    "query": "we've already got the spec approved, give me three architecture options for the notifications service",
+    "should_trigger": false
+  },
+  {
+    "skill": "problem-spec",
+    "query": "here's my Express app, fix the bug where /login returns 500 when the email has a plus sign",
+    "should_trigger": false
+  },
+  {
+    "skill": "problem-spec",
+    "query": "write the PR description for the CSV export change we just merged",
+    "should_trigger": false
+  },
+  {
+    "skill": "problem-spec",
+    "query": "set up docker compose with postgres and redis for the project",
+    "should_trigger": false
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "given our approved spec in .specs/01-problem-spec.md, how should we structure the ticket tagging system? i want to see a few options and tradeoffs",
+    "should_trigger": true
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "compare a simple monolith vs a modular design vs an event-driven one for our booking app",
+    "should_trigger": true
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "what are the architecture options for the billing export and what would each cost us in maintenance",
+    "should_trigger": true
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "i'm torn between keeping this simple and building it extensible - lay out the trade-offs for me",
+    "should_trigger": true
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "what are we building and who is it for? i only have a vague idea so far",
+    "should_trigger": false
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "design the queues, retries and cache layers for the architecture we picked",
+    "should_trigger": false
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "which node version and test runner should we use",
+    "should_trigger": false
+  },
+  {
+    "skill": "arch-tradeoffs",
+    "query": "review this service class for race conditions",
+    "should_trigger": false
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "we chose the modular option. now work out what runs sync vs async, where the data lives and how retries and dead letters should work",
+    "should_trigger": true
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "design the runtime layout for the ticket tagger: workers, queue, cache, storage, and what happens when a consumer crashes",
+    "should_trigger": true
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "figure out the background jobs and storage tiers for the export feature, keep it language agnostic",
+    "should_trigger": true
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "what's our failure handling plan if the downstream api degrades - circuit breakers, backpressure?",
+    "should_trigger": true
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "compare three high level architectures for this project",
+    "should_trigger": false
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "pin node 22 and write the docker-compose file for postgres",
+    "should_trigger": false
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "break the work into small tasks with verification commands",
+    "should_trigger": false
+  },
+  {
+    "skill": "runtime-topology",
+    "query": "my redis client keeps timing out in production, why?",
+    "should_trigger": false
+  },
+  {
+    "skill": "env-foundry",
+    "query": "topology's done. set up the local dev environment - pick the stack, pin versions, docker compose, env example and a smoke test",
+    "should_trigger": true
+  },
+  {
+    "skill": "env-foundry",
+    "query": "i need a one-command bootstrap for this project with postgres and redis containers and a health check",
+    "should_trigger": true
+  },
+  {
+    "skill": "env-foundry",
+    "query": "choose a toolchain for the ticket tagger and make the dev setup reproducible, nothing floating on latest",
+    "should_trigger": true
+  },
+  {
+    "skill": "env-foundry",
+    "query": "create .env.example and a make setup target that verifies all containers are up",
+    "should_trigger": true
+  },
+  {
+    "skill": "env-foundry",
+    "query": "decide whether the system should be sync or async for report generation",
+    "should_trigger": false
+  },
+  {
+    "skill": "env-foundry",
+    "query": "split the backlog into atomic tasks",
+    "should_trigger": false
+  },
+  {
+    "skill": "env-foundry",
+    "query": "my docker container exits immediately on mac, what's wrong",
+    "should_trigger": false
+  },
+  {
+    "skill": "env-foundry",
+    "query": "write an ADR for choosing postgres",
+    "should_trigger": false
+  },
+  {
+    "skill": "task-slicer",
+    "query": "environment is verified. break the booking app into small tasks, schema first, each with a command to verify it",
+    "should_trigger": true
+  },
+  {
+    "skill": "task-slicer",
+    "query": "turn the topology and spec into a backlog i can work through one task at a time",
+    "should_trigger": true
+  },
+  {
+    "skill": "task-slicer",
+    "query": "slice this feature into tasks no bigger than two files each, with test commands",
+    "should_trigger": true
+  },
+  {
+    "skill": "task-slicer",
+    "query": "make me an implementation plan for the export feature ordered from migrations up to UI",
+    "should_trigger": true
+  },
+  {
+    "skill": "task-slicer",
+    "query": "implement TASK-02 from the backlog",
+    "should_trigger": false
+  },
+  {
+    "skill": "task-slicer",
+    "query": "give me a high-level project roadmap for the next quarter for stakeholders",
+    "should_trigger": false
+  },
+  {
+    "skill": "task-slicer",
+    "query": "set up the docker environment",
+    "should_trigger": false
+  },
+  {
+    "skill": "task-slicer",
+    "query": "write unit tests for the pricing module",
+    "should_trigger": false
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "implement TASK-03 from the backlog",
+    "should_trigger": true
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "start coding the next task in .specs/05-task-backlog.md",
+    "should_trigger": true
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "draft the order total calculation task - minimal version, we'll review after",
+    "should_trigger": true
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "pick up TASK-05 and give me a first working draft that passes its verification command",
+    "should_trigger": true
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "break this feature into atomic tasks first",
+    "should_trigger": false
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "clean up this function, it works but it's a nested mess",
+    "should_trigger": false
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "what could go wrong in this upload handler? be harsh",
+    "should_trigger": false
+  },
+  {
+    "skill": "draft-scaffold",
+    "query": "write a PR summary for what we shipped",
+    "should_trigger": false
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "this function works but it's six levels of nesting and impossible to read, simplify it without changing behavior",
+    "should_trigger": true
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "can you flatten the if/else ladder in pricing.py using guard clauses, tests must stay green",
+    "should_trigger": true
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "untangle this 200-line handler into smaller pure functions but don't touch the public API",
+    "should_trigger": true
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "reduce the cognitive complexity of the order service, no new dependencies",
+    "should_trigger": true
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "fix the off-by-one bug in pagination",
+    "should_trigger": false
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "add retry logic to the payment client",
+    "should_trigger": false
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "implement TASK-04",
+    "should_trigger": false
+  },
+  {
+    "skill": "safe-refactor",
+    "query": "write regression tests for the review findings",
+    "should_trigger": false
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "review this upload handler and be brutal, what could break",
+    "should_trigger": true
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "what are the failure modes and security holes in the code i just drafted for TASK-03",
+    "should_trigger": true
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "do a skeptical review of src/auth/session.ts before i merge it",
+    "should_trigger": true
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "find edge cases and race conditions in this queue consumer, give me failing inputs",
+    "should_trigger": true
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "refactor this code to be cleaner",
+    "should_trigger": false
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "write tests for the checkout flow",
+    "should_trigger": false
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "summarize this diff as a PR description",
+    "should_trigger": false
+  },
+  {
+    "skill": "adversarial-review",
+    "query": "explain what this function does",
+    "should_trigger": false
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "turn the findings in the review report into regression tests",
+    "should_trigger": true
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "write black-box tests for the order API covering edge cases and failures, no mocking the database",
+    "should_trigger": true
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "generate behavioral tests for TASK-03 using the test runner from our environment setup",
+    "should_trigger": true
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "add tests for empty input, unicode and malformed payloads for the importer",
+    "should_trigger": true
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "review this code for bugs",
+    "should_trigger": false
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "make this function more readable",
+    "should_trigger": false
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "document this module for new engineers",
+    "should_trigger": false
+  },
+  {
+    "skill": "behavior-tests",
+    "query": "implement the next task from the backlog",
+    "should_trigger": false
+  },
+  {
+    "skill": "dev-docs",
+    "query": "write the PR description for the CSV export feature, include how i verified it",
+    "should_trigger": true
+  },
+  {
+    "skill": "dev-docs",
+    "query": "write an ADR for why we went with the queue-based design instead of synchronous calls",
+    "should_trigger": true
+  },
+  {
+    "skill": "dev-docs",
+    "query": "create a runbook for the ticket tagger worker with common failure modes",
+    "should_trigger": true
+  },
+  {
+    "skill": "dev-docs",
+    "query": "summarize this milestone for the maintainers: what changed, why, and how to roll back",
+    "should_trigger": true
+  },
+  {
+    "skill": "dev-docs",
+    "query": "write the README for our open source launch with badges and a marketing blurb",
+    "should_trigger": false
+  },
+  {
+    "skill": "dev-docs",
+    "query": "review the diff for security issues",
+    "should_trigger": false
+  },
+  {
+    "skill": "dev-docs",
+    "query": "implement the remaining tasks",
+    "should_trigger": false
+  },
+  {
+    "skill": "dev-docs",
+    "query": "frame the problem for our next feature",
+    "should_trigger": false
+  }
+]

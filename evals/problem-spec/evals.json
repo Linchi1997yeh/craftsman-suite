@@ -1,0 +1,17 @@
+{
+  "skill_name": "problem-spec",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I want to add a 'saved searches' feature to our internal order lookup tool. Support agents use it all day and currently retype the same filters. Help me frame this before we design anything.",
+      "expected_output": "A .specs/01-problem-spec.md with problem, persona, capabilities, constraints, at least two non-goals, success metrics; vague terms challenged or marked OPEN QUESTION; no code or tech choices; stops with the review prompt.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "we need a faster checkout. it should scale. please just spec it",
+      "expected_output": "Skill challenges 'faster' and 'scalable' for concrete numbers, asks for non-goals, records unknowns as OPEN QUESTION instead of inventing, then stops.",
+      "files": []
+    }
+  ]
+}

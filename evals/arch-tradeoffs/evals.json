@@ -1,0 +1,17 @@
+{
+  "skill_name": "arch-tradeoffs",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "The problem spec in .specs/01-problem-spec.md is approved. Give me architecture options for the saved-searches feature.",
+      "expected_output": "Exactly three options (A/B/C) with pros/cons, a trade-off matrix with estimates labelled as such, a recommendation, Chosen Direction left pending, no vendors or code, written to .specs/02-conceptual-architecture.md, then stops.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "explore architectures for the checkout project",
+      "expected_output": "With no .specs/01-problem-spec.md present, the skill stops and tells the user to run /problem-spec first.",
+      "files": []
+    }
+  ]
+}
