@@ -1,0 +1,16 @@
+{
+  "name": "craftsman-suite",
+  "owner": {
+    "name": "Darren Yeh"
+  },
+  "metadata": {
+    "description": "Human-gated agentic development workflow skills."
+  },
+  "plugins": [
+    {
+      "name": "craftsman-suite",
+      "source": "./",
+      "description": "10 human-gated skills: problem-spec, arch-tradeoffs, runtime-topology, env-foundry, task-slicer, draft-scaffold, safe-refactor, adversarial-review, behavior-tests, dev-docs."
+    }
+  ]
+}

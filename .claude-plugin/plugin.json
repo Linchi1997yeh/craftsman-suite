@@ -1,0 +1,8 @@
+{
+  "name": "craftsman-suite",
+  "version": "0.1.0",
+  "description": "Human-in-the-loop agentic development workflow: 10 decoupled skills from problem framing to documentation, anchored in git-tracked .specs/ artifacts.",
+  "author": { "name": "Darren Yeh" },
+  "license": "MIT",
+  "keywords": ["workflow", "specs", "architecture", "refactoring", "code-review", "testing", "skills"]
+}
