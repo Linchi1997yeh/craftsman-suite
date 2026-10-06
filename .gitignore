@@ -6,3 +6,4 @@ node_modules/
 .claude/settings.local.json
 *.log
 plan.md
+.specs/

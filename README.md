@@ -159,7 +159,7 @@ Files your project gets:
 | 09 | [`behavior-tests`](skills/behavior-tests/SKILL.md) | Writes black-box tests from the spec and review findings | code, `reviews/`, `04` | test files |
 | 10 | [`dev-docs`](skills/dev-docs/SKILL.md) | Writes PR summaries, ADRs or runbooks | implemented code | PR summary, ADR or runbook |
 
-Reference copies of the `.specs/` templates are in [`.specs/`](.specs/). The skills carry their own inline copies.
+The `.specs/` folder is created in *your* project, not in this repo. Each skill carries its own artifact template inline.
 
 ## Roadmap
 
