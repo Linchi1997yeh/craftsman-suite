@@ -4,13 +4,16 @@
     "name": "Darren Yeh"
   },
   "metadata": {
-    "description": "Human-gated agentic development workflow skills."
+    "description": "Human-gated, spec-driven agent skills for Claude Code: problem framing, architecture trade-offs, task slicing, adversarial code review, safe refactoring, tests and docs."
   },
   "plugins": [
     {
       "name": "craftsman-suite",
       "source": "./",
-      "description": "10 human-gated skills: problem-spec, arch-tradeoffs, runtime-topology, env-foundry, task-slicer, draft-scaffold, safe-refactor, adversarial-review, behavior-tests, dev-docs."
+      "description": "10 human-gated skills for spec-driven AI development: problem-spec, arch-tradeoffs, runtime-topology, env-foundry, task-slicer, draft-scaffold, safe-refactor, adversarial-review, behavior-tests, dev-docs.",
+      "category": "development",
+      "tags": ["agent-skills", "spec-driven-development", "code-review", "refactoring", "testing", "architecture", "workflow"],
+      "homepage": "https://github.com/Linchi1997yeh/craftsman-suite"
     }
   ]
 }

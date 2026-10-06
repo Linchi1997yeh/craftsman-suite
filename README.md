@@ -2,14 +2,16 @@
 
 # craftsman-suite
 
-**Ten agent skills that take a project from idea to documented code, one human-reviewed step at a time.**
+**Spec-driven development skills for AI coding agents: ten human-gated steps from idea to documented code.**
+
+A Claude Code plugin and open `SKILL.md` skill pack for Codex, Cursor, Gemini CLI and OpenCode.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/Linchi1997yeh/craftsman-suite)](https://github.com/Linchi1997yeh/craftsman-suite/releases)
 [![Stars](https://img.shields.io/github/stars/Linchi1997yeh/craftsman-suite?style=flat)](https://github.com/Linchi1997yeh/craftsman-suite/stargazers)
 [![Agent Skills](https://img.shields.io/badge/standard-SKILL.md-8A2BE2)](https://agentskills.io)
 
-[Install](#install) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Skills](#skills) · [Roadmap](#roadmap)
+[Install](#install) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Skills](#skills) · [FAQ](#faq) · [Roadmap](#roadmap)
 
 </div>
 
@@ -17,7 +19,7 @@
 
 AI coding workflows usually fail by jumping from an informal prompt straight to a large block of code. The result is scope creep, unhandled edge cases, hallucinated dependencies and architectural drift.
 
-**craftsman-suite** splits the work into 10 focused skills. Each one writes its result to a git-tracked file, then **stops and waits for you**. Built on the open [`SKILL.md`](https://agentskills.io) standard, so it works in Claude Code, Codex, Cursor, Gemini CLI, OpenCode and more.
+**craftsman-suite** is a spec-driven development workflow for AI coding agents. It splits the work into 10 focused skills covering requirements, architecture trade-offs, task breakdown, implementation, adversarial code review, safe refactoring, behavior tests and documentation. Each skill writes its result to a git-tracked file, then **stops and waits for you**. Built on the open [`SKILL.md`](https://agentskills.io) standard, so it works in Claude Code, Codex, Cursor, Gemini CLI, OpenCode and more.
 
 ## Install
 
@@ -160,6 +162,53 @@ Files your project gets:
 | 10 | [`dev-docs`](skills/dev-docs/SKILL.md) | Writes PR summaries, ADRs or runbooks | implemented code | PR summary, ADR or runbook |
 
 The `.specs/` folder is created in *your* project, not in this repo. Each skill carries its own artifact template inline.
+
+## FAQ
+
+<details>
+<summary><b>What is craftsman-suite?</b></summary>
+
+&nbsp;
+
+A set of 10 agent skills (a Claude Code plugin that also installs in other agents) that guide AI-assisted development through a spec-driven pipeline. Every step produces a reviewable file and waits for your approval before the next one.
+
+</details>
+
+<details>
+<summary><b>How is it different from letting the agent code directly?</b></summary>
+
+&nbsp;
+
+The agent first frames the problem, compares architectures and slices the work into small verifiable tasks. Code is then drafted, attacked in review, refactored without behavior changes and covered by tests, one task at a time. Wrong assumptions get caught in a spec edit instead of a rewrite.
+
+</details>
+
+<details>
+<summary><b>Which agents does it work with?</b></summary>
+
+&nbsp;
+
+Claude Code natively as a plugin. Codex, Cursor, Gemini CLI, OpenCode and 70+ other agents through `npx skills add Linchi1997yeh/craftsman-suite`, because every skill follows the open `SKILL.md` standard.
+
+</details>
+
+<details>
+<summary><b>Do I have to run all ten skills?</b></summary>
+
+&nbsp;
+
+No. Each skill is independent. Use `adversarial-review` on existing code, `dev-docs` for a PR summary, or the whole pipeline for a new feature. Skills that need an earlier artifact tell you which skill to run first.
+
+</details>
+
+<details>
+<summary><b>Does it write code on its own?</b></summary>
+
+&nbsp;
+
+Only `draft-scaffold` (one task, clearly marked as a draft), `safe-refactor` and `behavior-tests` touch code. The design skills are barred from emitting application code, and none of the skills chains into the next one.
+
+</details>
 
 ## Roadmap
 
